@@ -22,7 +22,7 @@ crt.sh會記錄所有申請https的domain
 ## Easy Reverse
 strings 下來 拚湊一下
 ![](https://i.imgur.com/Pq1HOW9.png)
-`CTF{CTF{easyisntit}`
+`CTF{easyisntit}`
 
 
 # 網頁
