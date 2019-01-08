@@ -1,0 +1,1 @@
+CTF{!!!base64decodeGET_SHELL!!!!!}

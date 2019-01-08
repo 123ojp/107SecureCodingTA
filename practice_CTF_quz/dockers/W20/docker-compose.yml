@@ -1,0 +1,27 @@
+version: "2"
+services:
+    web:
+        build: ./web
+        ports:
+            - "10020:2015"
+        volumes:
+            - ./server:/srv/
+        links:
+            - db
+    db:
+        image: mysql:5.7
+        environment:
+            MYSQL_DATABASE: ctf
+            MYSQL_ROOT_PASSWORD: c@Qa-KPje6%jx+bC
+        volumes:
+            - ./db:/docker-entrypoint-initdb.d
+            - persistent:/var/lib/mysql
+volumes:
+    persistent:
+networks:
+    default:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet:  172.27.20.0/24

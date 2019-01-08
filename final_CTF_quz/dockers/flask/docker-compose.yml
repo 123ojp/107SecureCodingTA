@@ -1,0 +1,18 @@
+version: "2"
+services:
+    web:
+        build: ./flask
+        ports:
+            - "10105:80"
+        volumes:
+            - ./flask/app:/app
+            - ./flag:/flag
+volumes:
+    persistent:
+networks:
+    default:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet:  172.27.105.0/24

@@ -1,0 +1,17 @@
+version: "2"
+services:
+    web:
+        image: abiosoft/caddy:php
+        ports:
+            - "10121:2015"
+        volumes:
+            - ./server:/srv/
+volumes:
+    persistent:
+networks:
+    default:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet:  172.121.0.0/24

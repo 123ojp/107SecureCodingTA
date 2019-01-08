@@ -1,0 +1,17 @@
+version: "2"
+services:
+    web:
+        build: ./web
+        ports:
+            - "10118:80"
+        volumes:
+            - ./web/src:/var/www/html/
+volumes:
+    persistent:
+networks:
+    default:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet:  172.27.118.0/24

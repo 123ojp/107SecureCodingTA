@@ -1,0 +1,35 @@
+version: "2"
+services:
+    bot:
+        build: ./bot
+        volumes:
+            - ./bot/src:/home/bot/src
+        command: ["sh", "-c", "cd src && python3 bot.py"]
+        links:
+            - web
+    web:
+        build: ./web
+        ports:
+            - "10007:80"
+        volumes:
+            - ./web/src:/var/www/html/
+        links:
+            - db
+    db:
+        image: mysql:5.7
+        environment:
+            MYSQL_DATABASE: xss
+            MYSQL_ROOT_PASSWORD: FNzWc@v3a2bV@ps6
+        volumes:
+            - ./sql:/docker-entrypoint-initdb.d
+            - persistent:/var/lib/mysql
+
+volumes:
+    persistent:
+networks:
+    default:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet:  172.27.7.0/24

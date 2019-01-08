@@ -1,0 +1,17 @@
+version: "2"
+services:
+    web:
+        image: php:7-apache
+        ports:
+            - "10000:80"
+        volumes:
+            - ./server:/var/www/html/
+volumes:
+    persistent:
+networks:
+    default:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet:  172.27.1.0/24

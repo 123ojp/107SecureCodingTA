@@ -1,0 +1,112 @@
+.filelists {
+    margin: 20px 0;
+}
+
+.filelists h5 {
+    margin: 10px 0 0;
+}
+
+.filelists .cancel_all {
+    border:3px solid #607d8b;
+    cursor: pointer;
+    clear: both;
+    font-size: 25px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.filelist {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.filelist li {
+    background: #fff;
+    border-bottom: 1px solid #ECEFF1;
+    font-size: 14px;
+    list-style: none;
+    padding: 5px;
+    position: relative;
+}
+
+.filelist li:before {
+    display: none !important;
+}
+/* main site demos */
+
+.filelist li .bar {
+    background: #eceff1;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+    z-index: 0;
+    -webkit-transition: width 0.1s linear;
+    transition: width 0.1s linear;
+}
+
+.filelist li .content {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.filelist li .file {
+    color: #455A64;
+    float: left;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 50%;
+    white-space: nowrap;
+}
+
+.filelist li .progress {
+    color: #B0BEC5;
+    display: block;
+    float: right;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.filelist li .cancel {
+    color: red;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 10px;
+    margin: 0 0 0 10px;
+    text-transform: uppercase;
+}
+
+.filelist li.error .file {
+    color: red;
+}
+
+.filelist li.error .progress {
+    color: red;
+}
+
+.filelist li.error .cancel {
+    display: none;
+}
+.fs-upload.fs-light .fs-upload-target{
+    background: #fff;
+    border: 3px dashed #607d8b;
+    border-radius: 2px;
+    color: #455a64;
+    font-size: 14px;
+    margin: 0;
+    padding: 25px;
+    height: 400px;
+    font-size: 40px;
+    text-align: center;
+    -webkit-transition: background .15s linear,border .15s linear,color .15s linear,opacity .15s linear;
+    transition: background .15s linear,border .15s linear,color .15s linear,opacity .15s linear;
+}
+.fs-upload-input{
+  display: none;
+}

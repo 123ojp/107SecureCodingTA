@@ -1,0 +1,10 @@
+change flag:
+	./bot/src/bot.js
+	#4 bot.setCookie({name:"USERSESSID", domain:"web", value:"flag"});
+
+change bot timeout:
+	./bot/src/bot.py
+	#6 subprocess.run(cmd, timeout = 5)
+	
+deploy:
+	sudo docker-compose up -d
