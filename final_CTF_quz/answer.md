@@ -79,7 +79,7 @@ php 有個東西叫 session.upload_progress
 
 **這漏洞讓LFI=GET SHELL**
 
-參考資料：https://blog.orange.tw/2018/10/hitcon-ctf-2018-one-line-php-challenge.html?fbclid=IwAR0WFn8hqcSCLuf6Bd-hNYeyZW27zA2uNrIdNpauDGU9vxeXBc2491mgs1Q
+參考資料：https://blog.orange.tw/2018/10/hitcon-ctf-2018-one-line-php-challenge.html
 
 ## flask在搞? 10105 
 沒有過濾 `../`跳脫資料夾導致資料外洩
